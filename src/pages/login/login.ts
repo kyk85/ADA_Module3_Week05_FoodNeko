@@ -32,7 +32,7 @@ export class LoginPage {
     formBuilder:FormBuilder) {
 
       this.loginForm = formBuilder.group({
-        username:[''],
+        email:[''],
         password:['']
       })
   }
@@ -42,8 +42,7 @@ export class LoginPage {
   }
 
   loginUser(){
-    this.authProvider.loginUser(this.loginForm.value.username, this.loginForm.value.password).then(()=>{
-      
+    this.authProvider.loginUser(this.loginForm.value.email, this.loginForm.value.password).then(()=>{
       this.navCtrl.setRoot("LoginPage")
       .catch(error=>{
         console.log("ASDFDSFADSFDSAFAS")

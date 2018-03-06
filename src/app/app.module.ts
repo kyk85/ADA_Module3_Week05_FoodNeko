@@ -7,7 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 //import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile'
+//import { ProfilePage } from '../pages/profile/profile'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +22,7 @@ import { RestaurantProvider } from '../providers/restaurant/restaurant';
     HomePage,
     TabsPage,
     //LoginPage,
-    ProfilePage
+    //ProfilePage,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import { RestaurantProvider } from '../providers/restaurant/restaurant';
     HomePage,
     TabsPage,
     //LoginPage,
-    ProfilePage
+    //ProfilePage,
   ],
   providers: [
     StatusBar,

@@ -17,12 +17,12 @@
     <h4>Please Login</h4>
     <form [formGroup]="loginForm">
       <ion-item>
-        <ion-label stacked>Username</ion-label>
-        <ion-input type="text" formControlName="username"></ion-input>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label stacked>Password</ion-label>
-        <ion-input type="text" formControlName="password"></ion-input>
+        <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
     </form>
     <button ion-button block type="submit" (click)="loginUser()">Submit</button>

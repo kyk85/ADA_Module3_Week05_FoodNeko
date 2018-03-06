@@ -17,10 +17,6 @@
       <h4>Please enter your information</h4>
       <form [formGroup]="registerForm">
         <ion-item>
-          <ion-label stacked>Username</ion-label>
-          <ion-input type="text" formControlName="username"></ion-input>
-        </ion-item>
-        <ion-item>
           <ion-label stacked>Email</ion-label>
           <ion-input type="text" formControlName="email"></ion-input>
         </ion-item>
@@ -31,6 +27,26 @@
         <ion-item>
           <ion-label stacked>Confirm Password</ion-label>
           <ion-input type="text" formControlName="confirmPassword"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Display Name</ion-label>
+          <ion-input type="text" formControlName="displayName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>First Name/Given Name</ion-label>
+          <ion-input type="text" formControlName="firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Last Name/Surname</ion-label>
+          <ion-input type="text" formControlName="lastName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Address</ion-label>
+          <ion-input type="text" formControlName="address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Phone Number</ion-label>
+          <ion-input type="text" formControlName="phoneNumber"></ion-input>
         </ion-item>
 
       </form>

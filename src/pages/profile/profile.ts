@@ -35,7 +35,6 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
     this.profileProvider.getUserProfile().on("value",userProfileSnapshot=>{
       this.currentUser=userProfileSnapshot.val();
-      console.log(this.currentUser)
       this.loading.dismiss();
     })
     this.loading = this.loadCtrl.create();
@@ -44,7 +43,7 @@ export class ProfilePage {
 
   logOut(): void {
     this.authProvider.logoutUser().then(() => {
-    this.navCtrl.setRoot("LoginPage");
+      this.navCtrl.setRoot("LoginPage");
     });
   }
 

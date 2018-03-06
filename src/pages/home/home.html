@@ -5,6 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-    <p>MYRESTAURANT</p>
+    <ion-list>
+      <ion-item *ngFor="let restaurant of restaurantList" (click)="goToDetail(restaurant?.id)">
+        <h2>{{restaurant?.name}}</h2>
+        <p>Description: {{restaurant?.description}}</p>
+        <p>Address: {{restaurant?.address}}</p>
+        <p>Phone: {{restaurant?.phone}}</p>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="goToCreate()">Create a Restaurant</button>
   
 </ion-content>

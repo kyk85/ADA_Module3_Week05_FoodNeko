@@ -27,9 +27,22 @@ export class AuthProvider {
     return firebase.auth().signOut();
   }
 
-  registerUser(email:string, password:string):Promise<any>{
+  registerUser(email:string,
+    password:string,
+    displayName:string,
+    firstName:string,
+    lastName:string,
+    address:string,
+    phoneNumber:string):Promise<any>{
     return firebase.auth().createUserWithEmailAndPassword(email,password).then(newUser=>{
-      firebase.database().ref(`/userProfile/${newUser.uid}/username`).set(email)
+      firebase.database().ref(`/userProfile/${newUser.uid}/userName`).set(email);
+      firebase.database().ref(`/userProfile/${newUser.uid}/displayName`).set(displayName);
+      firebase.database().ref(`/userProfile/${newUser.uid}/firstName`).set(firstName);
+      firebase.database().ref(`/userProfile/${newUser.uid}/lastName`).set(lastName);
+      firebase.database().ref(`/userProfile/${newUser.uid}/address`).set(address);
+      firebase.database().ref(`/userProfile/${newUser.uid}/phoneNumber`).set(phoneNumber);
+
+    
     })
 
   }
